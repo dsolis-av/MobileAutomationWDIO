@@ -17,10 +17,10 @@ public class LoginScreen extends BaseScreen {
     private WebElement signUpSectionButton;
 
     @AndroidFindBy(uiAutomator = "description(\"input-email\")")
-    private WebElement emailInput;
+    protected WebElement emailInput;
 
     @AndroidFindBy(uiAutomator = "description(\"input-password\")")
-    private WebElement passwordInput;
+    protected WebElement passwordInput;
 
     @AndroidFindBy(uiAutomator = "description(\"button-LOGIN\")")
     private WebElement loginButton;
