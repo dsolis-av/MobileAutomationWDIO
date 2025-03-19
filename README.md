@@ -20,4 +20,12 @@ The test suite covers the following scenarios:
 ```bash
 mvn clean install
 ```
-5. With IntelliJ, open the project and execute each test class to validate scenarios individually, or run the suite.xml file to execute the whole suite.
+5. You can run the tests on a device matching at least the following capabilities:
+```json
+{
+  "appium:platformVersion": "15",
+  "appium:platformName": "Android",
+  "appium:automationName": "UiAutomator2"
+}
+```
+6. With IntelliJ, open the project and execute each test class to validate scenarios individually, or run the suite.xml file to execute the whole suite.
