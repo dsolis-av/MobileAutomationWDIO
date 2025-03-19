@@ -29,7 +29,11 @@ public class SignUpScreen extends LoginScreen {
         tap(signUpButton);
     }
 
-    public boolean successfulSignUpAlertIsVisible(){
-        return successfulSignUpAlert.isDisplayed();
+    public boolean successfulSignUpAlertIsVisible() {
+        try {
+            return successfulSignUpAlert.isDisplayed();
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
     }
 }

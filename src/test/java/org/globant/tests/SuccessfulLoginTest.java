@@ -1,6 +1,7 @@
 package org.globant.tests;
 
 import org.globant.base.BaseTest;
+import org.globant.screens.BottomBar;
 import org.globant.screens.LoginScreen;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -18,7 +19,9 @@ public class SuccessfulLoginTest extends BaseTest {
     //Precondition: User is at the Login screen
     @Test(testName = "Successful login test with already existing credentials", dataProvider = "Existing credentials to test login")
     public void loginTest(String email, String password){
-        LoginScreen loginScreen = new LoginScreen(driver);
+        BottomBar bottomBar = new BottomBar(driver);
+        //First we need to go to the Login screen
+        LoginScreen loginScreen = bottomBar.tapLoginButton();
         //First we tap the Login section button
         loginScreen.tapLoginSectionButton();
         //Now we fill the login form with the already existing credentials
@@ -28,5 +31,6 @@ public class SuccessfulLoginTest extends BaseTest {
         //We need to validate if the successful login alert is being displayed
         //If it is, then we have a successful login
         Assert.assertTrue(loginScreen.successfulLoginAlertIsVisible(), "Successful login alert is not displaying");
+        loginScreen.tapAlertOkButton();
     }
 }

@@ -6,6 +6,7 @@ public class RandomCredentialGenerator {
     private static final String USERNAME_CHARS = "abcdefghijklmnopqrstuvwxyz0123456789";
     private static final String PASSWORD_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$&*-_";
 
+    //Static method to generate random emails
     public static String generateRandomEmail() {
         Random random = new Random();
         int usernameLength = 6 + random.nextInt(5); //6 to 10 characters
@@ -19,6 +20,7 @@ public class RandomCredentialGenerator {
         return username + "@" + domain;
     }
 
+    //Static method to generate random passwords
     public static String generateRandomPassword() {
         Random random = new Random();
         int passwordLength = 8 + random.nextInt(5); // 8 to 12 characters

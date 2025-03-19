@@ -13,7 +13,11 @@ public class WebviewScreen extends BaseScreen {
         super(driver);
     }
 
-    public boolean webviewHeaderIsVisible(){
-        return webviewHeader.isDisplayed();
+    public boolean webviewHeaderIsVisible() {
+        try {
+            return webviewHeader.isDisplayed();
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
     }
 }

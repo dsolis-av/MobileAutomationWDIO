@@ -3,6 +3,9 @@
     <test name="User Tests">
         <classes>
             <class name="org.globant.tests.BottomBarNavigationTest"></class>
+            <class name="org.globant.tests.SuccessfulLoginTest"></class>
+            <class name="org.globant.tests.SuccessfulSignUpTest"></class>
+            <class name="org.globant.tests.SwipeTest"></class>
         </classes>
     </test>
 </suite>

@@ -28,13 +28,20 @@ public class LoginScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "resourceId(\"android:id/alertTitle\")")
     private WebElement successfulLoginAlert;
 
+    @AndroidFindBy(uiAutomator = "resourceId(\"android:id/button1\")")
+    private WebElement alertOkButton;
+
 
     public LoginScreen(AndroidDriver driver) {
         super(driver);
     }
 
-    public boolean loginScrollViewIsVisible(){
-        return loginScrollView.isDisplayed();
+    public boolean loginScrollViewIsVisible() {
+        try {
+            return loginScrollView.isDisplayed();
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
     }
 
     public SignUpScreen tapSignUpSectionButton(){
@@ -55,7 +62,15 @@ public class LoginScreen extends BaseScreen {
         tap(loginButton);
     }
 
-    public boolean successfulLoginAlertIsVisible(){
-        return successfulLoginAlert.isDisplayed();
+    public void tapAlertOkButton(){
+        tap(alertOkButton);
+    }
+
+    public boolean successfulLoginAlertIsVisible() {
+        try {
+            return successfulLoginAlert.isDisplayed();
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
     }
 }

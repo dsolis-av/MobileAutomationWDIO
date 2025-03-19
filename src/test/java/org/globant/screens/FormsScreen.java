@@ -14,7 +14,11 @@ public class FormsScreen extends BaseScreen {
         super(driver);
     }
 
-    public boolean formsScrollViewIsVisible(){
-        return formsScrollView.isDisplayed();
+    public boolean formsScrollViewIsVisible() {
+        try {
+            return formsScrollView.isDisplayed();
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
     }
 }

@@ -14,7 +14,11 @@ public class DragScreen extends BaseScreen {
         super(driver);
     }
 
-    public boolean dragScrollViewIsVisible(){
-        return dragScrollView.isDisplayed();
+    public boolean dragScrollViewIsVisible() {
+        try {
+            return dragScrollView.isDisplayed();
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
     }
 }

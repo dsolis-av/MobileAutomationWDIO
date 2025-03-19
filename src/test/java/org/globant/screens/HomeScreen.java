@@ -14,7 +14,11 @@ public class HomeScreen extends BaseScreen {
         super(driver);
     }
 
-    public boolean homeScrollViewIsVisible(){
-        return homeScrollView.isDisplayed();
+    public boolean homeScrollViewIsVisible() {
+        try {
+            return homeScrollView.isDisplayed();
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
     }
 }
