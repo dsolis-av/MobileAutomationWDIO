@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
 public class BottomBarNavigationTest extends BaseTest {
 
     //Precondition: User is at the Home screen
-    @Test(testName = "Navigating through the bottom bar options and verifying the matching screen displays")
+    @Test(testName = "Navigating through the bottom bar options and verifying the matching screen displays correctly")
     public void navigationTest(){
         SoftAssert softAssert = new SoftAssert();
         BottomBar bottomBar = new BottomBar(driver);
