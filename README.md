@@ -11,7 +11,7 @@ The test suite covers the following scenarios:
 - Verifying correct visibility of the cards in the carousel after swiping in the Swipe screen.
 - Verify visibility of the "You found me!!!" text after swiping to the bottom of the screen in the Swipe screen.
 
-## How to run with IntelliJ
+## How to run with IntelliJ - Considerations
 
 1. Clone the repository.
 2. Make sure you have **Java 17+** and **Maven** installed.
@@ -28,4 +28,5 @@ mvn clean install
   "appium:automationName": "UiAutomator2"
 }
 ```
-6. With IntelliJ, open the project and execute each test class to validate scenarios individually, or run the suite.xml file to execute the whole suite.
+6. Before attempting to run any test, make sure you are running the **appium** server.
+7. With IntelliJ, open the project and execute each test class to validate scenarios individually, or run the suite.xml file to execute the whole suite.
