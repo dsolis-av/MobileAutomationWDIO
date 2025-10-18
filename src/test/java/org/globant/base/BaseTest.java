@@ -31,7 +31,7 @@ public class BaseTest {
             url = new URL("http://127.0.0.1:4723");
             UiAutomator2Options options = new UiAutomator2Options()
                     .setPlatformName("Android")
-                    .setPlatformVersion("15")
+                    .setPlatformVersion("11")
                     .setAutomationName("UiAutomator2");
             AndroidDriver androidDriver = new AndroidDriver(url, options);
             androidDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
