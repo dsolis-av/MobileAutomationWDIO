@@ -22,13 +22,11 @@ public class BaseTest {
         if (driver != null){
             driver.quit();
         }
-        driver = createAndroidDriver();
     }
 
     private AndroidDriver createAndroidDriver(){
-        URL url = null;
         try {
-            url = new URL("http://127.0.0.1:4723");
+            URL url = new URL("http://127.0.0.1:4723");
             UiAutomator2Options options = new UiAutomator2Options()
                     .setPlatformName("Android")
                     .setPlatformVersion("11")
